@@ -175,7 +175,7 @@ void CKeyValueInputDialog::setValue(const QString &t)
 
 QPixmap CKeyValueInputDialog::iconPixmap() const
 {
-    return d->pixmapLabel->pixmap(Qt::ReturnByValue);
+    return *(d->pixmapLabel->pixmap());
 }
 
 void CKeyValueInputDialog::setIconPixmap(const QPixmap &p)

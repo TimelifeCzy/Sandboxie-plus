@@ -120,7 +120,7 @@ void CMultiLineInputDialog::setValue(const QString &t)
 
 QPixmap CMultiLineInputDialog::iconPixmap() const
 {
-    return d->pixmapLabel->pixmap(Qt::ReturnByValue);
+    return *(d->pixmapLabel->pixmap());
 }
 
 void CMultiLineInputDialog::setIconPixmap(const QPixmap &p)

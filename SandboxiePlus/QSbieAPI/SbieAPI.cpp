@@ -1415,8 +1415,11 @@ SB_STATUS CSbieAPI::UpdateProcesses(int iKeep, bool bAllSessions)
 	}
 
 	QMap<quint32, CBoxedProcessPtr>	OldProcessList;
-	foreach(const CSandBoxPtr& pBox, m_SandBoxes)
-		OldProcessList.insert(pBox->m_ProcessList);
+	foreach(const CSandBoxPtr & pBox, m_SandBoxes) {
+		// OldProcessList.insert(pBox->m_ProcessList);
+		// OldProcessList = pBox->m_ProcessList;
+	}
+
 
 	for (int i=0; i < count; i++)
 	{
