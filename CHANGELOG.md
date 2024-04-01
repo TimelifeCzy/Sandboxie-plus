@@ -4,12 +4,29 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 
 
-## [1.13.4 / 5.68.4] - 2024-02-??
+
+
+## [1.13.5 / 5.68.5] - 2024-03-??
+
+### Changed
+- on systems in test signing mode sandboxie will by default try outdated offsets
+- changed Qt5 version to Qt5.15.13 with latest security patches [#3694](https://github.com/sandboxie-plus/Sandboxie/pull/3694) (thanks LumitoLuma)
+
+
+
+## [1.13.4 / 5.68.4] - 2024-03-25
 
 ### Added
-- added option to prevent sandboxed programs from accessing the images of the window outside the sandbox [#1985](https://github.com/sandboxie-plus/Sandboxie/issues/1985) (thanks Yeyixiao)
+- added option to prevent sandboxed processes from accessing the images of the window outside the sandbox [#1985](https://github.com/sandboxie-plus/Sandboxie/issues/1985) (thanks Yeyixiao)
   - it can be enabled with "IsBlockCapture=y"
-  - see the sandbox option "Block obtain an image of an un-sandboxied window through Windows public method" in SandMan UI
+  - see the sandbox option "Prevent sandboxed processes from using public methods to capture window images" in SandMan UI
+- added "LingerExemptWnds=n" to make the lingering process monitor mechanism no longer exempt lingering processes with windows from termination
+- Added option 'SharedTemplate' to Box Wizard [#3737](https://github.com/sandboxie-plus/Sandboxie/pull/3737) (thanks offhub)
+- Added an option to force the protection of an encrypted sandbox to be enabled. [#3736](https://github.com/sandboxie-plus/Sandboxie/pull/3736) (thanks Yeyixiao)
+- Added a menu and button/icon to suspend all processes [#3741] (https://github.com/sandboxie-plus/Sandboxie/issues/3741)
+
+### Changed
+- option "LingerLeniency=n" now also disabled the 5 sec grace period for freshly started lingerers [#1892](https://github.com/sandboxie-plus/Sandboxie/issues/1892)
 
 ### Fixed
 - fixed issue with symlinks related to startmenu folders
@@ -35,10 +52,10 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 - added menu entry to restart SandMan as admin [#3581](https://github.com/sandboxie-plus/Sandboxie/issues/3581) (thanks Yeyixiao)
 - added option to block taking screen capture/screenshot of sandboxed processes (thanks Yeyixiao)
   - it can be enabled with "IsProtectScreen=y"
-  - see the sandbox option "Prevents getting an image of the window in the sandbox" in SandMan UI
+  - see the sandbox option "Prevent processes from capturing window images from sandboxed windows" in SandMan UI
 - added option to prevent sandboxed processes from interfering with power operations [#3640](https://github.com/sandboxie-plus/Sandboxie/issues/3640) (thanks Yeyixiao)
   - it can be enabled with "BlockInterferePower=y"
-  - see the sandbox option "Prevents processes in the sandbox from interfering with power operations" in SandMan UI
+  - see the sandbox option "Prevent sandboxed processes from interfering with power operations" in SandMan UI
 - added new pattern mechanism using a `**` as a placeholder to indicate an arbitrary path element not containing a `\` [1ff2867](https://github.com/sandboxie-plus/Sandboxie/commit/1ff28679b0557a642d29f1651a90a8f7fec77171)
 
 ### Changed
