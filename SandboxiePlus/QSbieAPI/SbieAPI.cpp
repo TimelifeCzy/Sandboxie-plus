@@ -19,7 +19,7 @@
 #include <QDebug>
 #include <QStandardPaths>
 #ifdef _DEBUG
-#include <QGuiApplication>
+#include <QtGui/QGuiApplication>
 #endif
 #include "SbieAPI.h"
 

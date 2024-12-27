@@ -20,7 +20,7 @@
 #include "SandBox.h"
 #include "../SbieAPI.h"
 #ifdef _DEBUG
-#include <QGuiApplication>
+#include <QtGui/QGuiApplication>
 #endif
 
 #include <ntstatus.h>
